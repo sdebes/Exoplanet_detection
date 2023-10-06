@@ -24,5 +24,7 @@ For each peak, a 16-dimensional vector of summary statistics was created, contai
 Each of these 16D vectors was then transformed to 2D points using Principal Component Analysis (PCA), which were clustered using the DBSCAN algorithm. The algorithm was first used to classify signal from noise. It created two clusters where cluster 1 was tightly centered around Origo on the two PCA axes, while cluster 2 was spread out far from Origo.
 Cluster 1 being close to origo indicates that it varies little, as we expect from a constant signal, while cluster 2 being spread out means that it varied a lot, which we would expect from noise.
 
+The cleaned signal was then again clustered into 10 potential sources of light. For each of the clusters of peaks, the mean radial velocity was calculated. The radial velocity of the star was then calculated as the average of the radial velocities weighted with the uncertainties of the value of the radial velocities in each cluster.
+
 # Result
 Finally, the radial velocity of the star was calculated to be $-0.123\pm0.004$ m/s indicating no presence of an exoplanet. The uncertainty is unreasonably small but is derived from uncertainties inherited in the data, and I did not have the time to figure out the source of the error.
